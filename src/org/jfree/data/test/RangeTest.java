@@ -41,17 +41,21 @@ public class RangeTest extends TestCase {
 		assertEquals("The central value of -1 and 1 should be 0", 0, rangeObjectUnderTest.getCentralValue(), 0.000000001d);
 	}
 	@Test
-	public void testContains() {
-		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));
+	public void testContainsInRange() {
+		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
+	}
+	public void testContainsOutsideRange() {		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));
 		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
 	}
-	public void testConstrain() {
+	public void testConstrainInRange() {
 		System.out.print("Expected: 3 Actual: " + rangeConstrain.constrain(3) + " ");
-		assertEquals("Range should contain 3 and return 3", 3, rangeConstrain.constrain(3),0.000000001d);
-	
+		assertEquals("Range should contain 3 and return 3", 3, rangeConstrain.constrain(3),0.000000001d);	
+	}
+	public void testConstrainAboveRange() {	
 		System.out.print("Expected: 5 Actual: " + rangeConstrain.constrain(20)+" ");
 		assertEquals("Range shouldnt contain 20 but return clostest value in range with 5", 5, rangeConstrain.constrain(20),0.000000001d);
-		
+	}
+	public void testConstrainBelowRange() {
 		System.out.print("Expected: 1 Actual: " + rangeConstrain.constrain(-20)+" ");
 		assertEquals("Range shouldnt contain -20 but return clostest value in range with 1", 5, rangeConstrain.constrain(-20),0.000000001d);
 	
