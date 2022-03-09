@@ -47,11 +47,11 @@ public class RangeTest extends TestCase {
 	}
 	@Test
 	public void testContainsAboveRange() {		
-		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
+		assertEquals("Range shouldn't contain 6 and return false", false, rangeContains.contains(6));
 	}
 	@Test
 	public void testContainsBelowRange() {
-	assertEquals("Range shouldn't contain -5 and return false", false, rangeContains.contains(-5));
+	assertEquals("Range shouldn't contain 0 and return false", false, rangeContains.contains(0));
     }
 	// CONSTRAIN TESTING METHODS
 	@Test
