@@ -46,12 +46,10 @@ public class RangeTest extends TestCase {
 	// CONTAINS TESTING METHODS
 	@Test
 	public void testContainsInRange() {
-		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));
-		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
+		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
 	}
 	@Test
-	public void testContainsOutsideRange() {		
-		assertEquals("Range should contain 3 and return True", true, rangeContains.contains(3));
+	public void testContainsOutsideRange() {				
 		assertEquals("Range shouldn't contain 20 and return false", false, rangeContains.contains(20));
 	}
 	@Test
